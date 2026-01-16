@@ -39,7 +39,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChange }) =>
           >
             <div className="flex items-center gap-3">
               <img
-                src="/images/other/logo（长）.png"
+                src={getImageUrl("/images/other/logo（长）.png")}
                 alt="绿佳元"
                 className="h-14 w-auto"
               />

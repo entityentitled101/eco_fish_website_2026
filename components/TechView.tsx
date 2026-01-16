@@ -1,14 +1,15 @@
 import React from 'react';
 import { PROCESS_STEPS } from '../constants';
 import Stats from './Stats';
+import { getImageUrl } from '../utils';
 
 const TechView: React.FC = () => {
     // 图片映射
     const stepImages = [
-        '/images/tech/4_mud.png',      // 养泥
-        '/images/tech/4_grass.png',    // 养草
-        '/images/tech/4_water.jpg',    // 养水
-        '/images/tech/4_fish.png'      // 养鱼
+        getImageUrl('/images/tech/4_mud.png'),      // 养泥
+        getImageUrl('/images/tech/4_grass.png'),    // 养草
+        getImageUrl('/images/tech/4_water.jpg'),    // 养水
+        getImageUrl('/images/tech/4_fish.png')      // 养鱼
     ];
 
     return (
@@ -17,7 +18,7 @@ const TechView: React.FC = () => {
             <div className="bg-primary-900 py-24 px-6 text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-30">
                     <img
-                        src="/images/tech/4_header.png"
+                        src={getImageUrl("/images/tech/4_header.png")}
                         alt="技术背景"
                         className="w-full h-full object-cover"
                     />
@@ -85,7 +86,7 @@ const TechView: React.FC = () => {
                                                 <div className="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                                                     <div className="h-32 overflow-hidden">
                                                         <img
-                                                            src="/images/tech/4_fish_fish.webp"
+                                                            src={getImageUrl("/images/tech/4_fish_fish.webp")}
                                                             alt="麦穗鱼"
                                                             className="w-full h-full object-cover"
                                                         />
@@ -100,7 +101,7 @@ const TechView: React.FC = () => {
                                                 <div className="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                                                     <div className="h-32 overflow-hidden">
                                                         <img
-                                                            src="/images/tech/4_fish_shrimp.jpg"
+                                                            src={getImageUrl("/images/tech/4_fish_shrimp.jpg")}
                                                             alt="米虾"
                                                             className="w-full h-full object-cover"
                                                         />
