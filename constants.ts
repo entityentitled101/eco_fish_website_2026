@@ -1,4 +1,5 @@
 import { Fish, Leaf, Droplets, ShieldCheck, Activity, Award, UserCheck } from 'lucide-react';
+import { getImageUrl } from './utils';
 
 export const COMPANY_INFO = {
   name: "绿佳元",
