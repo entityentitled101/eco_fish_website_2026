@@ -44,7 +44,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                         <div className="mb-6">
                             <div className="bg-gradient-to-br from-gold-50 to-white p-6 border border-gold-200">
                                 <img
-                                    src="/weixin.jpg"
+                                    src="/images/other/weixin.jpg"
                                     alt="微信公众号二维码"
                                     className="w-full h-auto"
                                 />
