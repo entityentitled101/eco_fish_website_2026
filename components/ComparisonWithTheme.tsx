@@ -18,7 +18,7 @@ const Comparison: React.FC<ComparisonProps> = ({ theme = 'A' }) => {
             {theme === 'B' && (
                 <div className="absolute inset-0 opacity-10">
                     <img
-                        src={getImageUrl("/images/backgrounds/bg_1.jpg")}
+                        src="/images/backgrounds/bg_1.jpg"
                         alt="对比背景"
                         className="w-full h-full object-cover"
                     />

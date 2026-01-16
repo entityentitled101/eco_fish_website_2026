@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ onViewChange }) => {
       {/* Background with Dark Green Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={getImageUrl("/images/hero/fish（1）.jpg")}
+          src="/images/hero/fish（1）.jpg"
           alt="生态湖泊"
           className="w-full h-full object-cover"
         />

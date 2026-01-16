@@ -1,11 +1,9 @@
 import React from 'react';
 import { TEAM, BASES } from '../constants';
 import { MapPin } from 'lucide-react';
-import { getImageUrl } from '../utils';
-
 const TeamView: React.FC = () => {
-    const teamImages = [getImageUrl('/images/team/ppl (1).png'), getImageUrl('/images/team/ppl (2).png')];
-    const baseImages = [getImageUrl('/images/bases/base (1).jpg'), getImageUrl('/images/bases/base (2).jpg')];
+    const teamImages = ['/images/team/ppl (1).png', '/images/team/ppl (2).png'];
+    const baseImages = ['/images/bases/base (1).jpg', '/images/bases/base (2).jpg'];
 
     return (
         <div className="animate-fade-in bg-white min-h-screen">

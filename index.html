@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>绿佳元 - 清水生态养殖</title>
-    <!-- 引入 Noto Serif SC 字体，增加装饰感和权威感 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: '#f4fbf7',
-                100: '#eefcf5',
-                200: '#cbece0',
-                300: '#9cdbc2',
-                400: '#5abf9a',
-                500: '#2d9e78',
-                600: '#1e7f60',
-                700: '#16654e',
-                800: '#054a2b', // 您指定的主色调
-                900: '#022c19', // 更深的基础色
-                950: '#011a0f',
-              },
-              gold: {
-                50: '#fbf9eb',
-                100: '#f5f0ce',
-                200: '#ece19f',
-                300: '#e1cb68',
-                400: '#d4b13a',
-                500: '#c5a028', // 主金色
-                600: '#a37e1e',
-                700: '#825f1b',
-                800: '#6b4c1c',
-                900: '#5a3f1d',
-              },
-              nature: {
-                light: '#f9fbfb', // 极浅的冷白
-                paper: '#fdfcf8', // 暖白
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>绿佳元 - 清水生态养殖</title>
+  <!-- 引入 Noto Serif SC 字体，增加装饰感和权威感 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f4fbf7',
+              100: '#eefcf5',
+              200: '#cbece0',
+              300: '#9cdbc2',
+              400: '#5abf9a',
+              500: '#2d9e78',
+              600: '#1e7f60',
+              700: '#16654e',
+              800: '#054a2b', // 您指定的主色调
+              900: '#022c19', // 更深的基础色
+              950: '#011a0f',
             },
-            fontFamily: {
-              sans: ['Noto Sans SC', 'Microsoft YaHei', 'sans-serif'], // 正文
-              serif: ['Noto Serif SC', 'Songti SC', 'serif'], // 标题，增强装饰感
+            gold: {
+              50: '#fbf9eb',
+              100: '#f5f0ce',
+              200: '#ece19f',
+              300: '#e1cb68',
+              400: '#d4b13a',
+              500: '#c5a028', // 主金色
+              600: '#a37e1e',
+              700: '#825f1b',
+              800: '#6b4c1c',
+              900: '#5a3f1d',
+            },
+            nature: {
+              light: '#f9fbfb', // 极浅的冷白
+              paper: '#fdfcf8', // 暖白
             }
+          },
+          fontFamily: {
+            sans: ['Noto Sans SC', 'Microsoft YaHei', 'sans-serif'], // 正文
+            serif: ['Noto Serif SC', 'Songti SC', 'serif'], // 标题，增强装饰感
           }
         }
       }
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: 'Noto Sans SC', sans-serif;
-        color: #022c19; /* 极深绿代替纯黑 */
-      }
-      /* 标题使用衬线体 */
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Noto Serif SC', serif;
-      }
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-      }
-    </style>
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      color: #022c19;
+      /* 极深绿代替纯黑 */
+    }
+
+    /* 标题使用衬线体 */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Noto Serif SC', serif;
+    }
+
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -79,10 +91,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
