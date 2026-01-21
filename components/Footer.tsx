@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../utils';
 import { ViewState } from '../App';
 
 interface FooterProps {
@@ -13,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ onViewChange }) => {
           <div>
             <div className="mb-6">
               <img
-                src="/images/other/logo（长）.png"
+                src={getImageUrl("/images/other/logo（长）.png")}
                 alt="绿佳元"
                 className="h-12 w-auto"
               />

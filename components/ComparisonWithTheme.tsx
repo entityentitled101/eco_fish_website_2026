@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../utils';
 import { COMPARISON_DATA } from '../constants';
 import { ChevronDown } from 'lucide-react';
 
@@ -18,7 +19,7 @@ const Comparison: React.FC<ComparisonProps> = ({ theme = 'A' }) => {
             {theme === 'B' && (
                 <div className="absolute inset-0 opacity-10">
                     <img
-                        src="/images/backgrounds/bg_1.jpg"
+                        src={getImageUrl("/images/backgrounds/bg_1.jpg")}
                         alt="对比背景"
                         className="w-full h-full object-cover"
                     />

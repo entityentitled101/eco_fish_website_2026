@@ -1,27 +1,28 @@
 import React from 'react';
+import { getImageUrl } from '../utils';
 const ProductView: React.FC = () => {
     const dishes = [
         {
-            image: '/images/products/dish (1).JPG',
+            image: getImageUrl('/images/products/dish (1).JPG'),
             name: '清蒸鲈鱼',
             desc: '无需料酒去腥，简单上锅清蒸便能体现原本的鲜甜滋味。清水生态养殖让鲈鱼完全没有土腥味，保留最纯粹的鲜美。'
         },
         {
-            image: '/images/products/dish (2).JPG',
+            image: getImageUrl('/images/products/dish (2).JPG'),
             name: '鲈鱼粥',
             desc: '鲈鱼的肌间小刺很少，鱼肉又嫩滑鲜美。因为全程零抗养殖，非常适合给小朋友、小宝宝做辅食煮粥吃，安全放心。'
         },
         {
-            image: '/images/products/dish (3).JPG',
+            image: getImageUrl('/images/products/dish (3).JPG'),
             name: '清蒸鲈鱼',
             desc: '蒜瓣肉质、紧实弹牙。低密度养殖赋予鲈鱼充足的活动空间，造就了肉质的紧实口感和鲜美滋味。'
         }
     ];
 
     const otherFish = [
-        { name: '草鱼', image: '/images/products/other_fish (1).png', highlight: '肉质弹性、鲜美嫩滑' },
-        { name: '清波鱼', image: '/images/products/other_fish (2).png', highlight: '高蛋白18.1%' },
-        { name: '鳊鱼', image: '/images/products/other_fish (3).png', highlight: '出肉率高、肉质紧实' }
+        { name: '草鱼', image: getImageUrl('/images/products/other_fish (1).png'), highlight: '肉质弹性、鲜美嫩滑' },
+        { name: '清波鱼', image: getImageUrl('/images/products/other_fish (2).png'), highlight: '高蛋白18.1%' },
+        { name: '鳊鱼', image: getImageUrl('/images/products/other_fish (3).png'), highlight: '出肉率高、肉质紧实' }
     ];
 
     return (
@@ -54,7 +55,7 @@ const ProductView: React.FC = () => {
                     {/* fish_display (1) - 主图 */}
                     <div className="lg:col-span-2 h-96 lg:h-[500px] overflow-hidden shadow-2xl relative group">
                         <img
-                            src="/images/products/fish_display (1).jpg"
+                            src={getImageUrl("/images/products/fish_display (1).jpg")}
                             alt="清水鲈鱼"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -67,7 +68,7 @@ const ProductView: React.FC = () => {
                     {/* fish_display (2) - 鱼鳃 */}
                     <div className="h-96 lg:h-[500px] overflow-hidden shadow-xl relative group">
                         <img
-                            src="/images/products/fish_display (2).jpg"
+                            src={getImageUrl("/images/products/fish_display (2).jpg")}
                             alt="鱼鳃细节"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
@@ -132,7 +133,7 @@ const ProductView: React.FC = () => {
                             <div className="relative">
                                 <div className="h-64 overflow-hidden shadow-2xl">
                                     <img
-                                        src="/images/products/fish_quality (1).jpg"
+                                        src={getImageUrl("/images/products/fish_quality (1).jpg")}
                                         alt="内脏细节"
                                         className="w-full h-full object-cover"
                                     />
@@ -146,7 +147,7 @@ const ProductView: React.FC = () => {
                             <div className="relative">
                                 <div className="h-64 overflow-hidden shadow-2xl">
                                     <img
-                                        src="/images/products/fish_quality (2).jpg"
+                                        src={getImageUrl("/images/products/fish_quality (2).jpg")}
                                         alt="肉质纹理"
                                         className="w-full h-full object-cover"
                                     />
@@ -264,7 +265,7 @@ const ProductView: React.FC = () => {
                         <div className="bg-gradient-to-br from-gold-100 to-gold-50 shadow-lg p-6 h-full flex flex-col">
                             <div className="flex items-center justify-center mb-6 flex-1" style={{ minHeight: '300px' }}>
                                 <img
-                                    src="/images/products/gift_package.png"
+                                    src={getImageUrl("/images/products/gift_package.png")}
                                     alt="精美礼盒"
                                     className="w-full h-auto object-contain"
                                 />
@@ -288,7 +289,7 @@ const ProductView: React.FC = () => {
                                 <div>
                                     <div className="overflow-hidden shadow-2xl mb-6">
                                         <img
-                                            src="/images/products/product_package (1).jpg"
+                                            src={getImageUrl("/images/products/product_package (1).jpg")}
                                             alt="活鱼发货"
                                             className="w-full h-56 object-cover"
                                         />
@@ -305,7 +306,7 @@ const ProductView: React.FC = () => {
                                 <div>
                                     <div className="overflow-hidden shadow-2xl mb-6">
                                         <img
-                                            src="/images/products/product_package (2).jpg"
+                                            src={getImageUrl("/images/products/product_package (2).jpg")}
                                             alt="冰鲜三去"
                                             className="w-full h-56 object-cover"
                                         />

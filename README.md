@@ -257,3 +257,4 @@ git commit -m "添加联系我们弹窗功能"
 - `/fish（1）.jpg` - 首页背景图
 - `/contrast (1).jpg` - 传统养殖模式图
 - `/contrast (2).jpg` - 清水生态养殖模式图
+- `utils.ts` - 工具函数（如图片路径处理）

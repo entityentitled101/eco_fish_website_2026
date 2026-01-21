@@ -1,4 +1,5 @@
 import { Fish, Leaf, Droplets, ShieldCheck, Activity, Award, UserCheck } from 'lucide-react';
+import { getImageUrl } from './utils';
 export const COMPANY_INFO = {
   name: "绿佳元",
   slogan: "好水养育健康鱼",
@@ -9,7 +10,7 @@ export const COMPANY_INFO = {
 export const COMPARISON_DATA = {
   traditional: {
     title: "传统养殖模式",
-    image: "/images/other/contrast (1).jpg",
+    image: getImageUrl("/images/other/contrast (1).jpg"),
     features: [
       "农户分散养殖：密度过高，依赖抗生素",
       "环境恶化 - 应激发病 - 过量用药恶性循环",
@@ -21,7 +22,7 @@ export const COMPARISON_DATA = {
   },
   ecological: {
     title: "清水生态养殖模式",
-    image: "/images/other/contrast (2).jpg",
+    image: getImageUrl("/images/other/contrast (2).jpg"),
     features: [
       "养殖与净化共生共融",
       "低密度散养，模拟自然生态",

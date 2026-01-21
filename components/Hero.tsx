@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImageUrl } from '../utils';
 import { COMPANY_INFO } from '../constants';
 import { ViewState } from '../App';
 
@@ -19,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ onViewChange }) => {
       {/* Background with Dark Green Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero/fish（1）.jpg"
+          src={getImageUrl("/images/hero/fish（1）.jpg")}
           alt="生态湖泊"
           className="w-full h-full object-cover"
         />

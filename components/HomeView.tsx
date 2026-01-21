@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getImageUrl } from '../utils';
 import Hero from './Hero';
 import ComparisonWithTheme from './ComparisonWithTheme';
 import { ViewState } from '../App';
@@ -26,7 +27,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onViewChange }) => {
         {/* 背景图片 bg_2 */}
         <div className="absolute inset-0 opacity-15">
           <img
-            src="/bg_2.jpg"
+            src={getImageUrl("/bg_2.jpg")}
             alt="背景"
             className="w-full h-full object-cover"
           />
