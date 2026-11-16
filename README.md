@@ -85,151 +85,6 @@ git commit -m "添加联系我们弹窗功能"
 
 ---
 
-## 🚀 部署指南
-
-本项目支持两种部署方式：**GitHub Pages（国外访问，需要 VPN）** 和 **阿里云 OSS（国内直接访问）**。
-
----
-
-### 🌍 方式一：GitHub Pages 自动部署
-
-#### ✨ 特点
-- ✅ 完全自动化，git push 即可触发部署
-- ✅ 免费托管
-- ❌ 国内访问需要 VPN
-
-#### 📝 部署步骤
-
-1. **确保代码已推送到 GitHub**
-   ```bash
-   git add .
-   git commit -m "更新网站内容"
-   git push origin main
-   ```
-
-2. **配置 GitHub Pages**
-   - 访问：`https://github.com/您的用户名/eco_fish_website_2026/settings/pages`
-   - **Source** 选择：**GitHub Actions**（不是 Deploy from a branch）
-   - 保存设置
-
-3. **等待自动部署**
-   - 访问：`https://github.com/您的用户名/eco_fish_website_2026/actions`
-   - 查看部署进度（通常 2-3 分钟）
-   - ✅ 绿色勾号表示部署成功
-
-4. **访问网站**
-   ```
-   https://entityentitled101.github.io/eco_fish_website_2026/
-   ```
-
-#### 🔄 更新流程
-每次推送代码到 `main` 分支，GitHub Actions 会自动重新构建和部署。
-
----
-
-### ☁️ 方式二：阿里云 OSS 部署（推荐国内访问）
-
-#### ✨ 特点
-- ✅ 国内直接访问，速度快
-- ✅ 可绑定自定义域名
-- ⚙️ 需要手动上传文件
-
-#### 📝 一键部署流程
-
-**第一步：生成 OSS 部署包**
-
-在项目根目录运行：
-```powershell
-.\deploy-to-oss.ps1
-```
-
-这个脚本会自动：
-1. 安装依赖
-2. 构建 OSS 专用版本（根路径模式）
-3. 创建压缩包 `oss_deploy_YYYYMMDD_HHMMSS.zip`
-4. 显示上传说明
-
-**第二步：上传到 OSS**
-
-选择以下任一方式：
-
-##### 方式 A：控制台上传（最简单）
-1. 登录 [阿里云 OSS 控制台](https://oss.console.aliyun.com/)
-2. 进入 Bucket：`lvjiayuanecofish`
-3. 删除旧文件（如果有）
-4. 上传 `oss_deploy_*.zip` 到根目录
-5. 在 OSS 控制台解压文件
-6. 确保 `index.html` 在根目录
-
-##### 方式 B：手动上传文件（推荐）
-1. 打开项目的 `dist` 文件夹
-2. 选择所有文件和文件夹
-3. 直接拖拽上传到 OSS Bucket 根目录
-4. 等待上传完成
-
-##### 方式 C：命令行工具（高级用户）
-```bash
-# 安装 ossutil（首次使用）
-# 下载：https://help.aliyun.com/document_detail/120075.html
-
-# 配置 OSS 访问密钥
-ossutil64 config
-
-# 上传文件
-ossutil64 cp -r dist\ oss://lvjiayuanecofish/ -u
-```
-
-**第三步：配置静态网站托管**
-
-在 OSS 控制台配置（只需首次配置）：
-1. 进入 Bucket → **基础设置** → **静态页面**
-2. 设置：
-   - **默认首页**：`index.html`
-   - **默认 404 页**：`index.html`（重要！单页应用必须）
-3. 开启 **公共读** 权限
-
-**第四步：访问网站**
-
-如果已绑定自定义域名：
-```
-https://您的域名.com
-```
-
-如果使用 OSS 默认域名：
-```
-http://lvjiayuanecofish.oss-cn-hongkong.aliyuncs.com
-```
-
-#### 🔄 后续更新流程
-每次更新网站内容后：
-```powershell
-# 1. 生成新的部署包
-.\deploy-to-oss.ps1
-
-# 2. 上传 dist 文件夹内容到 OSS（覆盖旧文件）
-```
-
----
-
-### ⚙️ 部署配置说明
-
-#### 构建命令
-```bash
-# GitHub Pages 版本（子路径 /eco_fish_website_2026/）
-npm run build
-
-# 阿里云 OSS 版本（根路径 /）
-npm run build:oss
-```
-
-#### 路径配置
-- **GitHub Pages**：`base: '/eco_fish_website_2026/'`
-- **阿里云 OSS**：`base: '/'`
-
-项目会根据 `DEPLOY_TARGET` 环境变量自动选择正确的路径配置。
-
----
-
 ## 本地运行
 
 **前置要求**: Node.js
@@ -244,10 +99,10 @@ npm run build:oss
    npm run dev
    ```
 
-3. 在浏览器中打开 `http://localhost:3000`
+3. 在浏览器中打开 `http://localhost:5173`
 
 
----
+
 
 ## 最新更新
 
