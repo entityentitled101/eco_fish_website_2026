@@ -258,3 +258,7 @@ git commit -m "添加联系我们弹窗功能"
 - `/contrast (1).jpg` - 传统养殖模式图
 - `/contrast (2).jpg` - 清水生态养殖模式图
 - `utils.ts` - 工具函数（如图片路径处理）
+
+## 阿里云 OSS 静态构建
+
+在项目根目录运行 `npm run build:oss`，使用 `dist/` 中的构建产物部署到 OSS 静态网站根目录。这个构建的资源路径以 `/` 为基准。GitHub Pages 继续运行 `npm run build`。
